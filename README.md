@@ -1,5 +1,5 @@
 # README
-[![Build Status](https://codeship.com/projects/8a474d30-bdb9-0136-64dd-06db9786e066/status?branch=master)
+![Build Status](https://codeship.com/projects/8a474d30-bdb9-0136-64dd-06db9786e066/status?branch=master)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
