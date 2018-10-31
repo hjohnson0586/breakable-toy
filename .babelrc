@@ -1,13 +1,17 @@
 {
   "presets": [
-    ["env", {
+    [
+      "env",
+      {
       "modules": false,
       "targets": {
         "browsers": "> 1%",
         "uglify": true
       },
-      "useBuiltIns": true
-    }]
+        "useBuiltIns": true
+      }
+    ],
+    "react"
   ],
 
   "plugins": [
