@@ -1,11 +1,12 @@
-class CreateConfigurations < ActiveRecord::Migration[5.2]
+class CreateBuilds < ActiveRecord::Migration[5.2]
   def change
-    create_table :configurations do |t|
+    create_table :builds do |t|
       t.string :cpu, null: false
+      t.string :cooler, null: false
       t.string :motherboard, null: false
       t.string :ram, null: false
       t.string :gpu, null: false
-      t.string :ssd, null: false
+      t.string :storage, null: false
       t.string :psu, null: false
       t.string :case, null: false
 
