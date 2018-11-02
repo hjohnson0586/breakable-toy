@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-import BuildTile from '../components/BuildTile'
+import PartTile from '../components/PartTile'
 
-class BuildIndex extends Component {
+class PartIndex extends Component {
   constructor(props) {
     super(props);
-    this.state = { builds: [] };
+    this.state = { parts: [] };
   }
 
   componentDidMount() {
-    fetch('/api/v1/builds')
+    fetch(`/api/v1/builds/${this.props.params.id}`)
     .then(response => {
       if (response.ok) {
         return response;
@@ -21,7 +21,7 @@ class BuildIndex extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      this.setState({ builds: body });
+      this.setState({ parts: body });
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
@@ -29,9 +29,9 @@ class BuildIndex extends Component {
   render() {
     return (
       <div>
-        <BuildTile builds={this.state.builds} />
+        <PartTile parts={this.state.parts} />
       </div>
     )
   }
 }
-export default BuildIndex;
+export default PartIndex;

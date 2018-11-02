@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_29_170503) do
+ActiveRecord::Schema.define(version: 2018_11_02_150407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "builds", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description", null: false
+    t.integer "price", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parts", force: :cascade do |t|
     t.string "cpu", null: false
     t.string "cooler", null: false
     t.string "motherboard", null: false
@@ -24,8 +32,10 @@ ActiveRecord::Schema.define(version: 2018_10_29_170503) do
     t.string "storage", null: false
     t.string "psu", null: false
     t.string "case", null: false
+    t.bigint "build_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["build_id"], name: "index_parts_on_build_id"
   end
 
   create_table "users", force: :cascade do |t|

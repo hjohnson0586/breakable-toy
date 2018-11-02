@@ -5,8 +5,9 @@ const BuildTile = props => {
     return(
       <div key={build.id} >
         <div>
-          <h3><a href={`/builds/${build.id}`}>{build.cpu}</a></h3>
-          <p>{build.gpu} {build.motherboard}</p>
+          <h3><a href={`/builds/${build.id}`}>{build.name}</a></h3>
+            <p>{build.description}</p>
+            <p>${build.price}</p>
         </div>
       </div>
     )
