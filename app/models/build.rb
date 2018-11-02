@@ -1,3 +1,5 @@
 class Build < ApplicationRecord
-  validates_presence_of :cpu, :cooler, :motherboard, :ram, :gpu, :storage, :psu, :case
+  has_many :parts
+
+  validates_presence_of :name, :description, :price
 end
