@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
   root 'builds#index'
   get '/builds', to: 'builds#index'
-  get '/builds/:id', to: 'builds#index'
+  get '/builds/:build_id', to: 'builds#index'
 end

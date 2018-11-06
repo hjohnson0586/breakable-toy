@@ -9,7 +9,7 @@ export const App = (props) => {
   <Router history={browserHistory}>
     <Route path="/" component={BuildIndex}/>
     <Route path="/builds" component={BuildIndex}/>
-    <Route path="/builds/:id" component={PartIndex}/>
+    <Route path="/builds/:build_id" component={PartIndex}/>
   </Router>
   )
 }
