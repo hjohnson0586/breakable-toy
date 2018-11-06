@@ -9,7 +9,7 @@ class PartIndex extends Component {
   }
 
   componentDidMount() {
-    fetch(`/api/v1/builds/${this.props.params.id}`)
+    fetch(`/api/v1/builds/${this.props.params.build_id}/parts`)
     .then(response => {
       if (response.ok) {
         return response;
@@ -29,7 +29,17 @@ class PartIndex extends Component {
   render() {
     return (
       <div>
-        <PartTile parts={this.state.parts} />
+      <PartTile
+      key={this.state.parts.id}
+      cpu={this.state.parts.cpu}
+      motherboard={this.state.parts.motherboard}
+      cooler={this.state.parts.cooler}
+      gpu={this.state.parts.gpu}
+      ram={this.state.parts.ram}
+      storage={this.state.parts.storage}
+      psu={this.state.parts.psu}
+      case={this.state.parts.case}
+       />
       </div>
     )
   }
