@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+.build-tile-css {
+  padding: 15vw 5vw;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Merienda', cursive;
+  float: right;
+   background-image: linear-gradient(black, black, black, black, black, black, orange)
+}
+
+.build-title {
+  color: #FFFFFF;
+  border: 2px solid white;
+  border-radius: .35em;
+  padding: .4vw .4vw;
+  background-color: orange;
+  font-family: 'Merienda', cursive;
+}
+
+.build-title:hover {
+  color: black;
+}
+
+.build-description {
+  padding-top: 1vw;
+}
+
+.build-price {
+  padding-bottom: 2vw
+}
