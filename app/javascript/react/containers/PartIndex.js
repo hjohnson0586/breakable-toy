@@ -28,7 +28,7 @@ class PartIndex extends Component {
 
   render() {
     return (
-      <div>
+      <div className="padding">
       <PartTile
       key={this.state.parts.id}
       cpu={this.state.parts.cpu}
