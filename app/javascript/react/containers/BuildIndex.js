@@ -28,8 +28,12 @@ class BuildIndex extends Component {
 
   render() {
     return (
-      <div>
-        <BuildTile builds={this.state.builds} />
+      <div className="index-page-css">
+        <div>
+          <div>
+            <BuildTile builds={this.state.builds} />
+          </div>
+        </div>
       </div>
     )
   }
